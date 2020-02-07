@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="10.062000000000001" tests="6" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-12-23T08:07:29" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="patient medical records test" timestamp="2019-12-23T08:07:29" tests="6" file="/Users/kumardivyarajat/WebstormProjects/patient-medical-records/test/test.js" failures="0" time="10.062000000000001">
+    <testcase name="patient medical records test Should render the filter view initially" time="0.077" classname="Should render the filter view initially">
+    </testcase>
+    <testcase name="patient medical records test Should not start fetching the data if the disabled value is selected in the select menu" time="0.1" classname="Should not start fetching the data if the disabled value is selected in the select menu">
+    </testcase>
+    <testcase name="patient medical records test Should show the loader when a valid value is selected from the select dropdown" time="0.133" classname="Should show the loader when a valid value is selected from the select dropdown">
+    </testcase>
+    <testcase name="patient medical records test Should render the profile view with user data when the data is fetched" time="2.085" classname="Should render the profile view with user data when the data is fetched">
+    </testcase>
+    <testcase name="patient medical records test Should render the table data correctly when the data is fetched" time="1.948" classname="Should render the table data correctly when the data is fetched">
+    </testcase>
+    <testcase name="patient medical records test Should fetch and render table data when the selected patient changes" time="5.719" classname="Should fetch and render table data when the selected patient changes">
+    </testcase>
+  </testsuite>
+</testsuites>
