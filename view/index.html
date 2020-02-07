@@ -9,6 +9,9 @@
     <!--You can load all the css files here -->
     <link rel="stylesheet" type="text/css" href="css/select.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -21,28 +24,30 @@
 
 <div class="content">
     <section class="flex select-form-container" id="patient-filter">
-        <div class="select">
-            <select id="patient-select">
-                <option selected disabled value="-1">Select User</option>
-                <option value="1">John Oliver</option>
-                <option value="2">Bob Martin</option>
-                <option value="3">Helena Fernandez</option>
-                <option value="4">Francesco De Mello</option>
-            </select>
-        </div>
-
-        <button type="submit" id="submit-btn">
-            Show
-        </button>
+        <form id="fetch-records">
+            <div class="select">
+                <select id="patient-select" name="patient">
+                    <option selected disabled value="-1">Select User</option>
+                    <option value="1">John Oliver</option>
+                    <option value="2">Bob Martin</option>
+                    <option value="3">Helena Fernandez</option>
+                    <option value="4">Francesco De Mello</option>
+                </select>
+            </div>
+    
+            <button type="submit" id="submit-btn">
+                Show
+            </button>
+        </form>
     </section>
 
-    <div id="loader-view">
+    <div id="loader-view" style="display: none;">
         <section class="loader-container">
             <span class="loader"></span>
         </section>
     </div>
 
-    <section class="patient-profile-container" id="profile-view">
+    <section class="patient-profile-container" id="profile-view" style="display: none;">
         <div id="patient-profile">
             <h1 id="patient-name"></h1>
             <h3 id="patient-dob"></h3>
