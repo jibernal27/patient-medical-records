@@ -14,7 +14,8 @@ function displayPatient(response){
             $("#table-body").append(
                 `
                 <tr>
-                    <td>${new Date(element.timestamp).toDateString()}</td>
+                    <td>${element.id}</td>
+                    <td>${new Date(element.timestamp).toLocaleString().split(',')[0]}</td>
                     <td>${element.diagnosis.name}(${element.diagnosis.id})</td>
                     <td>${element.meta.weight}</td>
                     <td>${element.doctor.name}</td>
