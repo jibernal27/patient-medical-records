@@ -1,7 +1,17 @@
 const headers = ['SL', 'Date', 'Diagnosis', 'Weight', 'Doctor']
 
 function displayPatient(response){
-    console.log(response)
+    let data = response.data
+
+    if (data.length>0){
+        let record = data[0]
+        $('#patient-name').html(record.userName)
+        $('#patient-dob').html(`DOB:${record.userDob}`)
+        $('#patient-height').html(`Height: ${record.meta.height}`)
+    }
+    
+    let view = $('#profile-view')
+    view.show()
 }
 
 
