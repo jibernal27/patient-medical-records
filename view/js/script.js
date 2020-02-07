@@ -8,6 +8,21 @@ function displayPatient(response){
         $('#patient-name').html(record.userName)
         $('#patient-dob').html(`DOB:${record.userDob}`)
         $('#patient-height').html(`Height: ${record.meta.height}`)
+
+        $("#table-body tr").remove();
+        data.array.forEach(element => {
+            $("#table-body").append(
+                `
+                <tr>
+                    <td>${}</td>
+                    <td>${}</td>
+                    <td>${ecord.meta.weight}</td>
+                    <td>${}</td>
+                    
+                </tr>
+                `
+            )
+        });
     }
     
     let view = $('#profile-view')
