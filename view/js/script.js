@@ -10,15 +10,14 @@ function displayPatient(response){
         $('#patient-height').html(`Height: ${record.meta.height}`)
 
         $("#table-body tr").remove();
-        data.array.forEach(element => {
+        data.forEach(element => {
             $("#table-body").append(
                 `
                 <tr>
-                    <td>${}</td>
-                    <td>${}</td>
-                    <td>${ecord.meta.weight}</td>
-                    <td>${}</td>
-                    
+                    <td>${new Date(element.timestamp).toDateString()}</td>
+                    <td>${element.diagnosis.name}(${element.diagnosis.id})</td>
+                    <td>${element.meta.weight}</td>
+                    <td>${element.doctor.name}</td>
                 </tr>
                 `
             )
